@@ -1,19 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { X } from "lucide-react";
 
-export default function Banner({
-  onStateChange,
-}: {
-  onStateChange?: (open: boolean) => void;
-}) {
+export default function Banner() {
   const [bannerOpen, setBannerOpen] = useState(true);
-
-  // Notify parent of state change
-  useEffect(() => {
-    if (onStateChange) onStateChange(bannerOpen);
-  }, [bannerOpen, onStateChange]);
 
   return (
     <div
@@ -23,10 +14,8 @@ export default function Banner({
       }`}
       role="alert"
     >
-      <div className="flex justify-between max-w-[var(--max-width)] mx-auto w-full">
-        <p className="max-w-[var(--max-width)] mx-auto text-primary-white px-3 py-2">
-          Banner Bar Text Here
-        </p>
+      <div className="flex justify-between max-w-[var(--max-width)] mx-auto w-full items-center px-3">
+        <p className="text-primary-white px-3 grow">Banner Bar Text Here</p>
         <button onClick={() => setBannerOpen(false)}>
           <X className="text-primary-white" size={32} />
         </button>
