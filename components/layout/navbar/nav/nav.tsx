@@ -1,5 +1,5 @@
-import DesktopNav from "@/components/layout/navbar/desktop_nav/desktop_nav";
-import MobileNav from "@/components/layout/navbar/mobile_nav/mobile_nav";
+import DesktopNav from "../desktop_nav/desktop_nav";
+import MobileNav from "../mobile_nav/mobile_nav";
 
 type NavProps = {
   children?: React.ReactNode;

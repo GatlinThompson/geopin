@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Inter } from "next/font/google";
-import Header from "@/components/header/header";
+import Header from "@/components/layout/header/header";
+import Footer from "@/components/layout/footer/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,7 +40,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${montserrat.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="mt-21">{children}a</main>
+        <Footer />
       </body>
     </html>
   );

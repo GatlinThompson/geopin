@@ -5,6 +5,7 @@
   --foreground: #141c23;
   --max-width: 1312px;
   --primary-blue: #06f;
+  --secondary-blue: #141b23;
 }
 
 @theme inline {
@@ -16,6 +17,7 @@
   --font-montserrat: var(--font-montserrat);
   --color-primary-blue: var(--primary-blue);
   --color-primary-white: var(--background);
+  --color-secondary-blue: var(--secondary-blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +30,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
+  /* Add Flex Layout  for dynamic layout*/
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Flex Layout*/
+main {
+  min-height: 150vh;
+  flex: 1 0 auto;
 }
 
 /* Header Font Styling */
