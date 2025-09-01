@@ -27,7 +27,7 @@ export default function StickyHeader({ children }: StickyHeaderProps) {
   }, [lastScrollY]);
   return (
     <div
-      className={`fixed top-0 w-full lg:pb-1 transition-all duration-300${
+      className={`fixed flex flex-col w-full top-0 w-full lg:pb-1 transition-all duration-300${
         isSticky ? " shadow-lg shadow-gray/20 " : ""
       } ${showNav ? "" : "-translate-y-full shadow-none"}`}
     >

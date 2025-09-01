@@ -26,22 +26,16 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 w-full lg:pb-1 transition-all duration-300${
-        isSticky ? " shadow-lg shadow-gray/20 " : ""
-      } ${showNav ? "" : "-translate-y-full shadow-none"}`}
-    >
-      <div
-        className={`flex flex-wrap row justify-start items-center px-3 pt-3 gap-4 max-w-[var(--max-width)] mx-auto 
+      className={`flex flex-wrap row justify-start items-center px-3 pt-3 gap-4 max-w-[var(--max-width)] mx-auto 
             w-full bg-background z-50`}
-      >
-        <div className="flex justify-between w-full">
-          <div>
-            <Link href="/">
-              <h1 className="header font-bold text-2xl">Geopin</h1>
-            </Link>
-          </div>
-          <Nav />
+    >
+      <div className="flex justify-between w-full">
+        <div>
+          <Link href="/">
+            <h1 className="header font-bold text-2xl">Geopin</h1>
+          </Link>
         </div>
+        <Nav />
       </div>
     </div>
   );
