@@ -52,3 +52,17 @@ main {
   font-family: var(--font-montserrat);
   font-weight: 700;
 }
+
+/* Animation */
+.swoop-up.in-view {
+  animation: swoop-up 0.15s ease-out;
+}
+
+@keyframes swoop-up {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
