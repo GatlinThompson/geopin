@@ -14,7 +14,10 @@ export default function Nav({ children }: NavProps) {
       >
         <MobileNav>{children}</MobileNav>
       </div>
-      <div id="desktop-nav" className="hidden lg:flex pb-3">
+      <div
+        id="desktop-nav"
+        className="hidden lg:flex  w-full grow justify-between "
+      >
         <DesktopNav>{children}</DesktopNav>
       </div>
     </>

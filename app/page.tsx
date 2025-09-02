@@ -1,7 +1,9 @@
-import Button from "@/components/button/button";
-import InlineLink from "@/components/inline_link/inline_link";
-import Image from "next/image";
+import HeroSection from "./components/hero_section/hero_section";
 
 export default function Home() {
-  return <>a </>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }

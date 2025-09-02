@@ -1,0 +1,26 @@
+.btn-blue {
+  background: var(--color-primary-blue);
+  color: var(--color-primary-white);
+}
+
+.btn-black {
+  background: var(--color-foreground);
+  color: var(--color-primary-white);
+  transition: opacity 0.2s ease;
+}
+
+.btn-outline {
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--color-foreground);
+  border: 3px solid var(--color-foreground);
+  transition: opacity 0.2s ease;
+}
+
+.btn {
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

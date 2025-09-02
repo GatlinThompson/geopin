@@ -1,22 +1,26 @@
 import React from "react";
+import styles from "./button.module.css";
 
 type ButtonProps = {
   children: React.ReactNode;
+  variant: "blue" | "black" | "outline";
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
-  className?: string;
 };
 export default function Button({
   children,
+  variant,
   type = "button",
   onClick,
-  className,
 }: ButtonProps) {
-
-    
-
   return (
-    <button type={type} onClick={onClick} className={`${className}`}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${styles[`btn-${variant}`]} ${
+        styles.btn
+      } px-7 py-4 rounded-full font-semibold text-xl`}
+    >
       {children}
     </button>
   );

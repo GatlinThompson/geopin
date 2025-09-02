@@ -5,6 +5,7 @@
   --foreground: #141c23;
   --max-width: 1312px;
   --primary-blue: #06f;
+  --secondary-foreground: #49505b;
   --secondary-blue: #141b23;
   --banner: #001d79;
 }
@@ -12,6 +13,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
@@ -21,12 +23,13 @@
   --color-secondary-blue: var(--secondary-blue);
   --color-banner: var(--banner);
 }
-
+/* Dark Mode Color could add later
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Add Dark Mode Colors */
+   
   }
 }
+*/
 
 body {
   background: var(--background);
