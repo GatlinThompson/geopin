@@ -1,12 +1,27 @@
+.btn {
+  transition: all 0.2s ease;
+}
+
 .btn-blue {
   background: var(--color-primary-blue);
   color: var(--color-primary-white);
 }
 
+.btn-blue:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-blue) 60%,
+    black 40%
+  );
+}
+
 .btn-black {
   background: var(--color-foreground);
   color: var(--color-primary-white);
-  transition: opacity 0.2s ease;
+}
+
+.btn-black:hover {
+  background-color: color-mix(in srgb, var(--color-foreground) 80%, white 20%);
 }
 
 .btn-outline {
@@ -14,13 +29,11 @@
   background: transparent;
   color: var(--color-foreground);
   border: 3px solid var(--color-foreground);
-  transition: opacity 0.2s ease;
 }
 
-.btn {
-  transition: opacity 0.2s ease;
-}
-
-.btn:hover {
-  opacity: 0.8;
+.btn-outline:hover {
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--color-primary-blue);
+  border: 3px solid var(--color-primary-blue);
 }

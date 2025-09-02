@@ -19,7 +19,7 @@ export default function Button({
       onClick={onClick}
       className={`${styles[`btn-${variant}`]} ${
         styles.btn
-      } px-7 py-4 rounded-full font-semibold  text-lglg:text-xl`}
+      } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl`}
     >
       {children}
     </button>
