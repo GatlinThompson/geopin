@@ -6,13 +6,13 @@ import Button from "@/components/button/button";
 export default function HeroSection() {
   return (
     <section className="px-3 max-w-[var(--max-width)] mx-auto w-full lg:px-10">
-      <div className="mt-3 pb-7">
+      <div className="mt-3 pb-7 swoop-up">
         <HeroTitle />
       </div>
       <div>
         <HeroList />
       </div>
-      <div className="flex gap-4 mt-10">
+      <div className="flex gap-4 mt-10 swoop-up">
         <Button variant="blue">Get Started</Button>
         <Button variant="outline">Talk to an Expert</Button>
       </div>

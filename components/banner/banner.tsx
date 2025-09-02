@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState } from "react";
 import { X } from "lucide-react";
 import BannerContainer from "./banner_container/banner_container";
 

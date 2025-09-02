@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useInviewAnimation } from "@/util/hooks/useInviewAnimation";
 
 export default function HeroTitle() {
   return (
