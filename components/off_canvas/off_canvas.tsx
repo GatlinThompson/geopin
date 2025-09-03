@@ -24,7 +24,7 @@ export default function OffCanvas({
     if (isOpen) {
       document.body.style.overflow = "hidden";
       setShouldRender(true);
-      setTimeout(() => setVisible(true), 10);
+      setTimeout(() => setVisible(true), 20);
     } else {
       document.body.style.overflow = "auto";
       const timeout = setTimeout(() => setShouldRender(false), 10);
