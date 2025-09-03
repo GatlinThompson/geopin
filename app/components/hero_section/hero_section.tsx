@@ -12,9 +12,9 @@ export default function HeroSection() {
       <div>
         <HeroList />
       </div>
-      <div className="flex gap-4 mt-10 md:mt-14 swoop-up">
+      <div className="flex gap-4 mt-10 md:mt-14 swoop-up flex-wrap">
         <Button variant="blue">Get Started</Button>
-        <Button variant="outline">Talk to an Expert</Button>
+        <Button variant="outline">Talk to an Location Expert</Button>
       </div>
     </section>
   );

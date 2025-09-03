@@ -50,7 +50,7 @@ main {
 /* Header Font Styling */
 .header {
   font-family: var(--font-montserrat);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* Animation */
