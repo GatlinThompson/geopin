@@ -1,6 +1,6 @@
 "use client";
 
-import OffCanvas from "@/components/off_canvas/off_canvas";
+import OffCanvas from "@/components/ui/off_canvas/off_canvas";
 import ToggleButton from "../toggle_button/toggle_button";
 import { useState, useEffect } from "react";
 

@@ -42,9 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${montserrat.variable} ${inter.variable} antialiased`}
       >
-        <Header />
-        <main className="mt-10 lg:mt-14">{children}</main>
-        <Footer />
+        {children}
         <ClientHooks />
       </body>
     </html>

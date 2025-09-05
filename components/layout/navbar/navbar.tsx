@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Nav from "./nav/nav";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -7,7 +8,13 @@ export default function Navbar() {
       <div className="flex justify-between w-full gap-10">
         <div>
           <Link href="/">
-            <h1 className="header font-bold text-2xl lg:text-4xl">Geopin</h1>
+            <Image
+              src="/assets/nav-logo.svg"
+              alt="logo"
+              width={100}
+              height={48}
+              className="h-7 w-auto  lg:h-10"
+            />
           </Link>
         </div>
         <Nav>
