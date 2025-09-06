@@ -8,7 +8,7 @@ import ScrollSider from "@/util/hooks/scroll_slider";
 export default function HeroSection() {
   return (
     <section className=" max-w-[var(--max-width)] mx-auto w-full lg:px-10">
-      <div className="px-3 mb-15 md:mb-20 lg:mb-25">
+      <div className="px-3 mb-15 md:mb-20 lg:mb-80">
         <div className="mt-3 pb-7">
           <HeroTitle />
         </div>
