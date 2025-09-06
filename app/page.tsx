@@ -7,7 +7,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="pt-10 lg:pt-14">
+      <main className="mt-8 lg:mt-16">
         <HeroSection />
       </main>
       <Footer />

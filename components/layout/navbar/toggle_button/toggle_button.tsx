@@ -12,7 +12,13 @@ type toggle_button_props = {
 export default function ToggleButton({ onClick, isOpen }: toggle_button_props) {
   return (
     <>
-      <button onClick={onClick} type="button">
+      <button
+        onClick={onClick}
+        type="button"
+        aria-label="toggle mobile menu"
+        value={"Toggle Mobile Menu Button"}
+        aria-expanded={isOpen}
+      >
         <Menu className="text-black" size={32} />
       </button>
     </>

@@ -75,24 +75,16 @@ main {
 }
 
 /* Define the keyframes for the fade-in animation */
-@keyframes slideOut {
+@keyframes slideLeft {
   from {
-    opacity: 0;
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   to {
-    opacity: 1;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-/* Apply the animation to an element when it comes into view */
-.animated-element {
-  opacity: 0; /* Initial state before animation */
-  animation: slideOut 0.5s ease-out;
-  animation-timeline: view(
-    block,
-    cover
-  ); /* Link animation to element's visibility */
-  animation-range: entry 0% cover 50%; /* Start when element enters, complete at 50% covered */
+.slide-left {
+  animation: slideLeft infinite linear;
+  animation-duration: 60000ms;
 }

@@ -7,6 +7,7 @@ type ButtonProps = {
   variant: "blue" | "black" | "outline";
   type?: "button" | "submit" | "reset";
   href?: string;
+
   onClick?: () => void;
 };
 export default function Button({
@@ -37,6 +38,7 @@ export default function Button({
       className={`${styles[`btn-${variant}`]} ${
         styles.btn
       } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl`}
+      aria-label=""
     >
       {children}
     </button>
