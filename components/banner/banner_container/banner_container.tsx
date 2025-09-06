@@ -31,7 +31,7 @@ export default function BannerContainer({
   return (
     <div
       id="banner"
-      className={`bg-banner flex justify-center transform transition-all duration-300 ease-in-out  ${
+      className={`bg-banner flex justify-center transform transition-all duration-300 ease-in-out overflow-hidden  ${
         isAtTop ? `h-12` : "h-0"
       }`}
       role="alert"
