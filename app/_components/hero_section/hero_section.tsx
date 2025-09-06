@@ -5,7 +5,7 @@ import HeroPartners from "./hero_partners/hero_partners";
 import Button from "@/components/ui/button/button";
 import ScrollSider from "@/util/hooks/scroll_slider";
 import Image from "next/image";
-import CityBlock from "@/public/city_blocks/city-block-1.png";
+import CityBlock from "@/public/city_blocks/mobile-city.png";
 
 export default function HeroSection() {
   return (
@@ -29,8 +29,8 @@ export default function HeroSection() {
           <Image
             src={CityBlock}
             alt="city block mobile image"
-            width={375}
-            height={375}
+            width={600}
+            height={600}
             className="w-full h-auto"
           />
         </div>
