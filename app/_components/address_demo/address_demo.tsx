@@ -7,7 +7,7 @@ export default function AddressDemo() {
     <AddressContainer container={"address-demo"}>
       <section
         id="address-demo"
-        className="px-3 max-w-[var(--max-width)] mx-auto w-full  min-h-screen mt-12 hide relative "
+        className="px-3 max-w-[var(--max-width)] mx-auto w-full  min-h-screen mt-12 hide relative bg-red-500"
       >
         <div className="sticky top-0">
           <AddressTyping />
