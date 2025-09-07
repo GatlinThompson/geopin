@@ -11,9 +11,10 @@ export default function AddressResults() {
   useEffect(() => {
     if (!displayedText || displayedText.length <= 3) return setResults(null);
     const results = addressResults.filter(
-      (result) => result.typed >= (displayedText?.length || 0)
+      (result) => result.typed <= (displayedText?.length || 0)
     );
-    setResults(results[0].addresses);
+
+    setResults(results[results.length - 1].addresses);
   }, [displayedText]);
 
   return (
