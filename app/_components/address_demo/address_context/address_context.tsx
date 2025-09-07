@@ -12,7 +12,7 @@ type AddressContextType = {
 };
 
 //full text to be displayed for address
-const fullText = "552 Orchard D";
+export const fullText = "552 Orchard D";
 
 // Create context for address text
 export const AddressContext = React.createContext<AddressContextType>({
