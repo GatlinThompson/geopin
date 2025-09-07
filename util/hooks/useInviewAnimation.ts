@@ -1,11 +1,16 @@
 import { useEffect } from "react";
 
-type SwoopProps = {
+type animationType = {
   selector: string;
   threshold: number;
+  unmount?: boolean;
 };
 
-export function useInviewAnimation({ threshold, selector }: SwoopProps) {
+export function useInviewAnimation({
+  threshold,
+  selector,
+  unmount = true,
+}: animationType) {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
     const observer = new IntersectionObserver(
@@ -13,7 +18,13 @@ export function useInviewAnimation({ threshold, selector }: SwoopProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("in-view");
-            obs.unobserve(entry.target);
+            if (unmount) {
+              obs.unobserve(entry.target);
+            }
+          }
+
+          if (!entry.isIntersecting && !unmount) {
+            entry.target.classList.remove("in-view");
           }
         });
       },

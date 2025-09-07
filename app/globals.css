@@ -9,6 +9,8 @@
   --secondary-foreground: #49505b;
   --secondary-blue: #141b23;
   --banner: #001d79;
+  --pink: #f55591;
+  --yellow: #ffbc98;
 }
 
 @theme inline {
@@ -24,6 +26,19 @@
   --color-primary-white: var(--background);
   --color-secondary-blue: var(--secondary-blue);
   --color-banner: var(--banner);
+  --color-pink: var(--pink);
+  --color-yellow: var(--yellow);
+  --animate-typer: typer 1s ease-in-out infinite;
+
+  @keyframes typer {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 }
 /* Dark Mode Color could add later
 @media (prefers-color-scheme: dark) {
@@ -89,4 +104,21 @@ main {
 .slide-left {
   animation: slideLeft infinite linear;
   animation-duration: 60000ms;
+}
+
+.show-up {
+  opacity: 0;
+}
+
+.show-up.in-view {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hide.in-view {
+  opacity: 0;
 }

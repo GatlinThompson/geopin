@@ -11,13 +11,13 @@ export default function HeroSection() {
   return (
     <section className=" max-w-[var(--max-width)] mx-auto w-full lg:px-10">
       <div className="px-3 mb-10 md:mb-20 lg:mb-80">
-        <div className="mt-3 pb-7">
+        <div className="mt-3 pb-7 ">
           <HeroTitle />
         </div>
         <div>
           <HeroList />
         </div>
-        <div className="flex gap-4 mt-10 md:mt-14 swoop-up flex-wrap">
+        <div className="flex gap-4 mt-10 md:mt-14 swoop-up flex-wrap relative">
           <Button variant="blue" href="#">
             Get Started
           </Button>
@@ -35,7 +35,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      <div className="py-8">
+      <div className="pt-8">
         <HeroPartners />
       </div>
     </section>
