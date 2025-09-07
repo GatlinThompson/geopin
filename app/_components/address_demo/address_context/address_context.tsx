@@ -4,6 +4,7 @@ import React, { useState, useContext, useEffect } from "react";
 
 type AddressContextProps = {
   children: React.ReactNode;
+  container: string;
 };
 
 type AddressContextType = {
@@ -20,11 +21,18 @@ export const AddressContext = React.createContext<AddressContextType>({
   handleScroll: () => {},
 });
 
-export default function AddressContainer({ children }: AddressContextProps) {
+export default function AddressContainer({
+  children,
+  container,
+}: AddressContextProps) {
   const [displayedText, setDisplayedText] = useState("");
 
+  console.log(container);
+
   const handleScroll = () => {
-    const addressSection = document.getElementById("address-demo");
+    const addressSection = document.getElementById(container);
+
+    console.log(addressSection);
     if (!addressSection) return;
 
     const sectionRect = addressSection.getBoundingClientRect();
@@ -53,13 +61,16 @@ export default function AddressContainer({ children }: AddressContextProps) {
 
       if (maxScroll > 0 && scrolledPastTop <= maxScroll) {
         // Calculate progress while section is still in view
-        const scrollProgress = scrolledPastTop / 10; // 20px per character
+        const scrollProgress = scrolledPastTop / 5; // 20px per character
+
         charactersToShow = Math.floor(
           Math.min(scrollProgress, fullText.length)
         );
       } else if (maxScroll <= 0) {
         // Section is smaller than viewport, show all characters when at top
-        const scrollProgress = scrolledPastTop / 10;
+
+        const scrollProgress = scrolledPastTop / 5;
+
         charactersToShow = Math.floor(
           Math.min(scrollProgress, fullText.length)
         );

@@ -9,7 +9,6 @@ export default function ScrollSider({
   children: React.ReactNode;
   className?: string;
 }) {
-  console.log("Title Renders");
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
