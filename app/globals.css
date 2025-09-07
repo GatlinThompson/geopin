@@ -115,10 +115,9 @@ main {
 }
 
 .hide {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }
 
-.hide.in-view {
-  opacity: 0;
+.hide.show {
+  opacity: 1;
 }

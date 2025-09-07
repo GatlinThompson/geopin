@@ -9,7 +9,7 @@ import CityBlock from "@/public/city_blocks/mobile-city.png";
 
 export default function HeroSection() {
   return (
-    <section className=" max-w-[var(--max-width)] mx-auto w-full lg:px-10">
+    <section className=" max-w-[var(--max-width)] mx-auto w-full lg:px-10min-h-screen">
       <div className="px-3 mb-10 md:mb-20 lg:mb-80">
         <div className="mt-3 pb-7 ">
           <HeroTitle />
