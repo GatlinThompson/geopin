@@ -17,7 +17,7 @@ export default function AddressResults() {
   }, [displayedText]);
 
   return (
-    <div className="pt-12">
+    <div className="pt-4 md:pt-10">
       <ul className="flex flex-col gap-2">
         {results?.map((address) => (
           <AddressResult
