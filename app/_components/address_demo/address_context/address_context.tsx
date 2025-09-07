@@ -9,7 +9,6 @@ type AddressContextProps = {
 
 type AddressContextType = {
   displayedText: string | null;
-  handleScroll: () => void;
 };
 
 //full text to be displayed for address
@@ -18,7 +17,6 @@ export const fullText = "552 Orchard D";
 // Create context for address text
 export const AddressContext = React.createContext<AddressContextType>({
   displayedText: null,
-  handleScroll: () => {},
 });
 
 export default function AddressContainer({
@@ -28,51 +26,21 @@ export default function AddressContainer({
   const [displayedText, setDisplayedText] = useState("");
 
   const handleScroll = () => {
+    if (typeof window === "undefined") return;
     const addressSection = document.getElementById(container);
-
     if (!addressSection) return;
 
     const sectionRect = addressSection.getBoundingClientRect();
+    const sectionHeight = sectionRect.height;
 
-    const sectionTop = sectionRect.top;
-    const sectionBottom = sectionRect.bottom;
-    const viewportHeight = window.innerHeight;
+    // Start revealing when section hits top of viewport
+    const start = 0;
+    const end = sectionHeight * 0.5; // 50% of section height
 
-    // Check if section is at top AND still in view
-    const isAtTop = sectionTop <= 0;
-    const isInView = sectionBottom > 0; // Bottom of section is still visible
+    const scrollProgress = Math.max(0, Math.min(-sectionRect.top, end));
+    const percentScrolled = scrollProgress / end;
 
-    if (isAtTop) {
-      addressSection.classList.add("show");
-    } else {
-      addressSection.classList.remove("show");
-    }
-
-    let charactersToShow = 0;
-
-    if (isAtTop && isInView) {
-      // Section is at or past the top AND still visible
-      const scrolledPastTop = Math.abs(sectionTop);
-      const sectionHeight = sectionRect.height;
-      const maxScroll = sectionHeight - viewportHeight; // Maximum scroll before section leaves view
-
-      if (maxScroll > 0 && scrolledPastTop <= maxScroll) {
-        // Calculate progress while section is still in view
-        const scrollProgress = scrolledPastTop / 20; // 20px per character
-
-        charactersToShow = Math.floor(
-          Math.min(scrollProgress, fullText.length)
-        );
-      } else if (maxScroll <= 0) {
-        // Section is smaller than viewport, show all characters when at top
-
-        const scrollProgress = scrolledPastTop / 20;
-
-        charactersToShow = Math.floor(
-          Math.min(scrollProgress, fullText.length)
-        );
-      }
-    }
+    const charactersToShow = Math.floor(percentScrolled * fullText.length);
 
     setDisplayedText(fullText.substring(0, charactersToShow));
   };
@@ -85,7 +53,7 @@ export default function AddressContainer({
   }, []);
 
   return (
-    <AddressContext.Provider value={{ displayedText, handleScroll }}>
+    <AddressContext.Provider value={{ displayedText }}>
       {children}
     </AddressContext.Provider>
   );
