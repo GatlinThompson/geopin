@@ -58,7 +58,7 @@ export default function AddressContainer({
 
       if (maxScroll > 0 && scrolledPastTop <= maxScroll) {
         // Calculate progress while section is still in view
-        const scrollProgress = scrolledPastTop / 5; // 20px per character
+        const scrollProgress = scrolledPastTop / 10; // 20px per character
 
         charactersToShow = Math.floor(
           Math.min(scrollProgress, fullText.length)
@@ -66,7 +66,7 @@ export default function AddressContainer({
       } else if (maxScroll <= 0) {
         // Section is smaller than viewport, show all characters when at top
 
-        const scrollProgress = scrolledPastTop / 5;
+        const scrollProgress = scrolledPastTop / 10;
 
         charactersToShow = Math.floor(
           Math.min(scrollProgress, fullText.length)
