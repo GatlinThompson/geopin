@@ -27,12 +27,9 @@ export default function AddressContainer({
 }: AddressContextProps) {
   const [displayedText, setDisplayedText] = useState("");
 
-  console.log(container);
-
   const handleScroll = () => {
     const addressSection = document.getElementById(container);
 
-    console.log(addressSection);
     if (!addressSection) return;
 
     const sectionRect = addressSection.getBoundingClientRect();
