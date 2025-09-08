@@ -15,7 +15,7 @@ export default function Icon({
   const Svg = icons[icon];
 
   //set color with tailwind
-  const colorString = `text-${color}`;
+  const colorString = `!text-${color}`;
 
   return (
     <>

@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Inter } from "next/font/google";
-import Header from "@/components/layout/header/header";
-import Footer from "@/components/layout/footer/footer";
-import Banner from "@/components/ui/banner/banner";
+import { Montserrat, Inter } from "next/font/google";
+
 import ClientHooks from "@/util/hooks/client_hooks";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Geopin",
+  title: "US Location Validation and Enrichment - Geopin",
   description:
     "Geopin is a location intelligence platform that helps you find any location as easy as 1, 2, 3.",
 };
@@ -39,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${montserrat.variable} ${inter.variable} antialiased`}
-      >
+      <body className={` ${montserrat.variable} ${inter.variable} antialiased`}>
         {children}
         <ClientHooks />
       </body>

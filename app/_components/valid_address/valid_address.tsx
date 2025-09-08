@@ -29,11 +29,11 @@ export default function ValidAddress() {
             <Button
               variant="blue"
               href="#"
-              className="inline-flex justify-start items-center "
+              className="inline-flex justify-start items-center !px-1 !py-1"
             >
-              <span>Try It Yourself</span>
+              <span className="ps-3">Try It Yourself</span>
 
-              <span className="ms-5 bg-background w-8 h-8 rounded-full text-primary-blue flex justify-center items-center">
+              <span className="ms-5 bg-background w-12 h-12 rounded-full text-primary-blue flex justify-center items-center">
                 -&gt;
               </span>
             </Button>

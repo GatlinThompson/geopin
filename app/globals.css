@@ -13,6 +13,10 @@
   --banner: #001d79;
   --pink: #f55591;
   --yellow: #ffbc98;
+  --bright-pink: #c66586;
+  --dark-purple: #9068ec;
+  --bright-orange: #cb8968;
+  --lime-green: #73c887;
 }
 
 @theme inline {
@@ -32,6 +36,10 @@
   --color-banner: var(--banner);
   --color-pink: var(--pink);
   --color-yellow: var(--yellow);
+  --color-bright-pink: var(--bright-pink);
+  --color-dark-purple: var(--dark-purple);
+  --color-bright-orange: var(--bright-orange);
+  --color-lime-green: var(--lime-green);
   --animate-typer: typer 1s ease-in-out infinite;
 
   @keyframes typer {

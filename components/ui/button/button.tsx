@@ -26,7 +26,7 @@ export default function Button({
         href={href}
         className={`${className} ${styles[`btn-${variant}`]} ${
           styles.btn
-        } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl`}
+        } ${className} px-7 py-4 rounded-full font-semibold  text-md lg:text-xl `}
       >
         {children}
       </Link>
@@ -39,8 +39,7 @@ export default function Button({
       onClick={onClick}
       className={`${styles[`btn-${variant}`]} ${
         styles.btn
-      } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl ${className}`}
-      aria-label=""
+      } ${className} px-7 py-4 rounded-full font-semibold  text-md lg:text-xl `}
     >
       {children}
     </button>

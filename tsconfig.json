@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/layout/header/sticky_header",
-    "app/components/hero_title"
+    "app/components/hero_title",
+    "app/_components/valid_address/valid_address_container/tsx",
+    "app/_components/valid_address/valid_address_container"
   ],
   "exclude": ["node_modules"]
 }
