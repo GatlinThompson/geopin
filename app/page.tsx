@@ -5,7 +5,7 @@ import HeroSection from "./_components/hero_section/hero_section";
 import AddressDemo from "./_components/address_demo/address_demo";
 import ValidAddress from "./_components/valid_address/valid_address";
 import BackgroundContainer from "@/components/ui/background_container/background_container";
-import Partners from "@/components/ui/partners/partners";
+import Products from "./_components/products/products";
 
 export default function Home({ children }: { children: React.ReactNode }) {
   return (
@@ -15,8 +15,8 @@ export default function Home({ children }: { children: React.ReactNode }) {
         <HeroSection />
         <AddressDemo />
         <ValidAddress />
-        <BackgroundContainer color="tertiary-background">
-          <Partners />
+        <BackgroundContainer color="primary-blue" className="mt-30">
+          <Products />
         </BackgroundContainer>
       </main>
       <Footer />
