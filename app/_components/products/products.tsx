@@ -5,11 +5,11 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="relative min-h-screen px-3 max-w-[var(--max-width)] mx-auto w-full"
+      className="relative min-h-screen  max-w-[var(--max-width)] mx-auto w-full"
     >
       <Partners />
 
-      <div>
+      <div className="px-3">
         <h2 className=" font-montserrat text-3xl font-semibold lg:text-5xl pt-30">
           Geopin products
         </h2>
