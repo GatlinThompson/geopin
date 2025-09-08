@@ -33,7 +33,7 @@ export default function MobileNav({ children }: MobileNavProps) {
             onClose={() => setIsOpen(false)}
             className="block lg:hidden"
           >
-            <nav>{children}</nav>
+            <nav role="navigation">{children}</nav>
           </OffCanvas>
         </>
       )}

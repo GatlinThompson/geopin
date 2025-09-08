@@ -7,6 +7,7 @@ type ButtonProps = {
   variant: "blue" | "black" | "outline";
   type?: "button" | "submit" | "reset";
   href?: string;
+  className?: string;
 
   onClick?: () => void;
 };
@@ -16,13 +17,14 @@ export default function Button({
   href,
   type = "button",
   onClick,
+  className,
 }: ButtonProps) {
   // If href is provided, render as a link
   if (href) {
     return (
       <Link
         href={href}
-        className={`${styles[`btn-${variant}`]} ${
+        className={`${className} ${styles[`btn-${variant}`]} ${
           styles.btn
         } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl`}
       >
@@ -37,7 +39,7 @@ export default function Button({
       onClick={onClick}
       className={`${styles[`btn-${variant}`]} ${
         styles.btn
-      } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl`}
+      } px-7 py-4 rounded-full font-semibold  text-md lg:text-xl ${className}`}
       aria-label=""
     >
       {children}

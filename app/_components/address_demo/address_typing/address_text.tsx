@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useContext, useEffect } from "react";
-import { AddressContext } from "../address_context/address_context";
+import { AddressContext } from "../address_context";
 
 export default function AddressText() {
   // const [displayedText, setDisplayedText] = useState("");

@@ -3,5 +3,5 @@ type DesktopNavProps = {
 };
 
 export default function DesktopNav({ children }: DesktopNavProps) {
-  return <nav>{children}</nav>;
+  return <nav role="navigation">{children}</nav>;
 }

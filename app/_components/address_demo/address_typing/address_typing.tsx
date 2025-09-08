@@ -1,6 +1,6 @@
 import React from "react";
-import AddressText from "../address_text/address_text";
-import AddressBar from "../address_bar/address_bar";
+import AddressText from "./address_text";
+import AddressBar from "./address_bar";
 
 export default function AddressTyping() {
   return (

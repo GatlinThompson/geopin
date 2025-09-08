@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
-
-import styles from "./inline_link.module.css";
-import Icon from "@/components/icons/icon";
-import { IconName, iconSizes } from "@/components/icons/icon_config";
+import Icon from "@/components/ui/icons/icon";
+import { IconName, iconSizes } from "@/components/ui/icons/icon_config";
 
 type InlineLinkProps = {
   children: React.ReactNode;

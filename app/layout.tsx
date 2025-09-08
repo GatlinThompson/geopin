@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Inter } from "next/font/google";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
-import Banner from "@/components/banner/banner";
+import Banner from "@/components/ui/banner/banner";
 import ClientHooks from "@/util/hooks/client_hooks";
 import "./globals.css";
 

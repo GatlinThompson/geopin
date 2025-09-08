@@ -1,7 +1,7 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import AddressResult from "./address_result/address_result";
-import { AddressContext } from "../address_context/address_context";
+import { AddressContext } from "../address_context";
 import { addressResults, AddressProps } from "./address_result/address_config";
 
 export default function AddressResults() {

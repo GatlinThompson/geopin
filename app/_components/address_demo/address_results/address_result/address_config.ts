@@ -1,4 +1,4 @@
-import { fullText } from "../../address_context/address_context";
+import { fullText } from "../../address_context";
 
 export type AddressResultProps = {
   typed: number; // Number of characters typed

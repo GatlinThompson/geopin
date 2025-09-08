@@ -1,4 +1,4 @@
-import AddressContainer from "./address_context/address_context";
+import AddressContainer from "./address_context";
 import AddressTyping from "./address_typing/address_typing";
 import AddressResults from "./address_results/address_results";
 import ScrollContainer from "@/util/hooks/scroll_container";

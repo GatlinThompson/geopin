@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { X } from "lucide-react";
-import BannerContainer from "@/components/ui/banner/banner_container/banner_container";
+import BannerContainer from "./banner_container/banner_container";
 
 export default function Banner() {
   const [bannerOpen, setBannerOpen] = useState(true);
