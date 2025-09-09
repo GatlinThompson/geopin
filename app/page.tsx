@@ -6,6 +6,7 @@ import AddressDemo from "./_components/address_demo/address_demo";
 import ValidAddress from "./_components/valid_address/valid_address";
 import BackgroundContainer from "@/components/ui/background_container/background_container";
 import Products from "./_components/products/products";
+import Perks from "./_components/perks/perks";
 
 export default function Home({ children }: { children: React.ReactNode }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
         <BackgroundContainer color="primary-blue" className="mt-30">
           <Products />
         </BackgroundContainer>
+        <Perks />
       </main>
       <Footer />
     </>

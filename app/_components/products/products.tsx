@@ -7,7 +7,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="  max-w-[var(--max-width)] mx-auto w-full pb-20"
+      className="  max-w-[var(--max-width)] mx-auto w-full pb-12"
     >
       <Partners />
 
