@@ -14,7 +14,7 @@ export default function Product({ product, index }: ProductProps) {
   const isEven = index % 2 === 0;
   return (
     <div className="py-8 grid grid-cols-1 lg:grid-cols-2 gap-10 ">
-      <div className={isEven ? "lg:order-1" : "lg:order-2"}>
+      <div className={` swoop-up ${isEven ? "lg:order-1" : "lg:order-2"}`}>
         <h3 className="text-xl md:text-2xl font-semibold font-montserrat pb-3">
           {product.name}
         </h3>
@@ -39,7 +39,7 @@ export default function Product({ product, index }: ProductProps) {
       <div
         className={`${
           isEven ? "lg:order-2" : "lg:order-1"
-        } md:max-w-[550px] mx-auto lg:px-10`}
+        } md:max-w-[550px] mx-auto lg:px-10 swoop-up`}
       >
         <Image
           src={product.image}
